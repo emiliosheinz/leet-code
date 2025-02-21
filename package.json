@@ -1,0 +1,31 @@
+{
+  "name": "leet-code",
+  "version": "1.0.0",
+  "description": "⌨️ My solutions for problems from leetcode.com",
+  "scripts": {
+    "lint": "npx @biomejs/biome lint --write ./problems",
+    "format": "npx @biomejs/biome format --write ./problems",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emiliosheinz/leet-code.git"
+  },
+  "keywords": [
+    "leet-code"
+  ],
+  "author": "@emiliosheinz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emiliosheinz/leet-code/issues"
+  },
+  "homepage": "https://github.com/emiliosheinz/leet-code#readme",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
