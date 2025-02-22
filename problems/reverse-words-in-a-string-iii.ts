@@ -1,5 +1,5 @@
 /**
- * Its important to note that this could have been solved with 
+ * Its important to note that this could have been solved with
  * one single line using Javascript string and array function:
  * s.split(" ").map(word => word.split("").reverse().join("")).join(" ");
  *
@@ -25,7 +25,7 @@ export function reverseWords(s: string): string {
 			}
 
 			/** Add an space, add one to the right and make the left equal */
-      result += ' ';
+			result += " ";
 			left = ++right;
 		} else {
 			/** Otherwise simply move the right more to the right */

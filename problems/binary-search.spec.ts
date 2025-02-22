@@ -8,7 +8,10 @@ const testData: TestData[] = [
 ];
 
 describe("binary-search", () => {
-  test.each(testData)("search(%s, %s) should return %s", (nums, target, expected) => {
-    expect(search(nums, target)).toBe(expected);
-  })
+	test.each(testData)(
+		"search(%s, %s) should return %s",
+		(nums, target, expected) => {
+			expect(search(nums, target)).toBe(expected);
+		},
+	);
 });

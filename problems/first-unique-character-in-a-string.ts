@@ -37,6 +37,6 @@ export function firstUniqChar(s: string): number {
 		}
 	}
 
-  /** Otherwise return -1 (not found) */
+	/** Otherwise return -1 (not found) */
 	return -1;
 }
