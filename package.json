@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "⌨️ My solutions for problems from leetcode.com",
   "scripts": {
-    "lint": "npx @biomejs/biome lint --write ./problems",
-    "format": "npx @biomejs/biome format --write ./problems",
+    "lint": "npx @biomejs/biome lint --write ./src",
+    "format": "npx @biomejs/biome format --write ./src",
     "test": "jest"
   },
   "repository": {
