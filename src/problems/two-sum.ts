@@ -1,5 +1,5 @@
 /**
- * The solution of this problem involves the concept of HasMaps
+ * The solution of this problem involves the concept of HashMaps
  *
  * @see: https://leetcode.com/problems/two-sum
  */
