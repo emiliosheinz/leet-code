@@ -6,7 +6,7 @@ class Node<T> {
 	) {}
 }
 
-export class DoubleLinkedList<T> {
+export class DoublyLinkedList<T> {
 	public head: Node<T> | null = null;
 	public tail: Node<T> | null = null;
 	public size = 0;

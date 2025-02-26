@@ -1,8 +1,8 @@
-import { DoubleLinkedList } from "./DoubleLinkedList";
+import { DoublyLinkedList } from "./DoublyLinkedList";
 
-describe("DoubleLinkedList", () => {
+describe("DoublyLinkedList", () => {
 	test("initializes with null head and tail and no size", () => {
-		const list = new DoubleLinkedList();
+		const list = new DoublyLinkedList();
 		expect(list.head).toBeNull();
 		expect(list.tail).toBeNull();
 		expect(list.size).toEqual(0);
@@ -10,7 +10,7 @@ describe("DoubleLinkedList", () => {
 
 	describe("addToHead", () => {
 		test("sets the new node as head and tail", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToHead(1);
 
@@ -19,7 +19,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("increases the size of the list", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToHead(1);
 			expect(list.size).toEqual(1);
@@ -32,7 +32,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("updates the head but leaves the tail untouched", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToHead(1);
 			expect(list.head?.value).toEqual(1);
@@ -44,7 +44,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("correctly sets next and prev", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToHead(1);
 			expect(list.head?.prev).toBeNull();
@@ -68,7 +68,7 @@ describe("DoubleLinkedList", () => {
 
 	describe("addToTail", () => {
 		test("sets the new node as head and tail", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToTail(1);
 
@@ -77,7 +77,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("increases the size of the list", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToTail(1);
 			expect(list.size).toEqual(1);
@@ -90,7 +90,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("updates the tail but leaves the head untouched", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToTail(1);
 			expect(list.head?.value).toEqual(1);
@@ -102,7 +102,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("correctly sets next and prev", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 
 			list.addToTail(1);
 			expect(list.head?.prev).toBeNull();
@@ -126,13 +126,13 @@ describe("DoubleLinkedList", () => {
 
 	describe("removeFromHead", () => {
 		test("returns null when there is no head", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 			const removedElement = list.removeFromHead();
 			expect(removedElement).toBeNull();
 		});
 
 		test("sets head and tail as null", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 			list.addToHead(1);
 			const removedElement = list.removeFromHead();
 			expect(removedElement).toEqual(1);
@@ -141,7 +141,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("sets new head and leaves tail untouched", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 			list.addToHead(1);
 			list.addToHead(2);
 			list.addToHead(3);
@@ -155,13 +155,13 @@ describe("DoubleLinkedList", () => {
 
 	describe("removeFromTail", () => {
 		test("returns null when there is no tail", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 			const removedElement = list.removeFromTail();
 			expect(removedElement).toBeNull();
 		});
 
 		test("sets head and tail as null", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 			list.addToTail(1);
 			const removedElement = list.removeFromTail();
 			expect(removedElement).toEqual(1);
@@ -170,7 +170,7 @@ describe("DoubleLinkedList", () => {
 		});
 
 		test("sets new tail and leaves head untouched", () => {
-			const list = new DoubleLinkedList<number>();
+			const list = new DoublyLinkedList<number>();
 			list.addToHead(1);
 			list.addToHead(2);
 			list.addToHead(3);
