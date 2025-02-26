@@ -11,14 +11,14 @@ export class ListNode {
  * @see: https://leetcode.com/problems/reverse-linked-list
  * */
 export function reverseList(head: ListNode | null): ListNode | null {
-	if (!head) return null;
-	let newHead = null;
-	let currentNode: ListNode | null = head;
-	while (currentNode) {
-		const nextNode: ListNode | null = currentNode.next;
-		currentNode.next = newHead;
-		newHead = currentNode;
-		currentNode = nextNode;
-	}
-	return newHead;
+  if(!head) return null;
+  let newList = null;
+  while(head) {
+    const next: ListNode | null = head.next;
+    head.next = newList;
+    newList = head;
+    head = next;
+  }
+  return newList;
 }
+
