@@ -1,11 +1,27 @@
-class Node<T> {
+interface NodeInterface<T> {
+	value: T;
+	next: Node<T> | null;
+}
+
+interface SinglyLinkedListInterface<T> {
+	head: Node<T> | null;
+	tail: Node<T> | null;
+	size: number;
+	append(value: T): void;
+	prepend(value: T): void;
+	insertAt(index: number, value: T): void;
+	removeAt(index: number): void;
+	find(value: T): Node<T> | null;
+}
+
+class Node<T> implements NodeInterface<T> {
 	constructor(
 		public value: T,
 		public next: Node<T> | null = null,
 	) {}
 }
 
-export class SinglyLinkedList<T> {
+export class SinglyLinkedList<T> implements SinglyLinkedListInterface<T> {
 	public head: Node<T> | null = null;
 	public tail: Node<T> | null = null;
 	public size = 0;
@@ -87,14 +103,14 @@ export class SinglyLinkedList<T> {
 		this.size--;
 	}
 
-  find(value: T): Node<T> | null {
-    let currentNode = this.head;
+	find(value: T): Node<T> | null {
+		let currentNode = this.head;
 
-    while (currentNode) {
-      if (currentNode.value === value) return currentNode;
-      currentNode = currentNode.next;
-    }
+		while (currentNode) {
+			if (currentNode.value === value) return currentNode;
+			currentNode = currentNode.next;
+		}
 
-    return null;
-  }
+		return null;
+	}
 }
