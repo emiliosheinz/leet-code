@@ -32,7 +32,7 @@ function toArray(head: ListNode | null): number[] {
 	return numbers;
 }
 
-describe("merge-two-sorted-lists.ts", () => {
+describe("merge-two-sorted-lists", () => {
 	test.each(testData)("mergeTwoLists(%s, %s) returns %s", (list1, list2, output) => {
 		expect(toArray(mergeTwoLists(toListNode(list1), toListNode(list2)))).toEqual(output);
 	});
