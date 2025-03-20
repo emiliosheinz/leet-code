@@ -61,4 +61,37 @@ describe("BinaryTree", () => {
 			expect(tree.preorderTraversal(tree.root?.left)).toEqual([5, 3, 7]);
 		});
 	});
+
+	describe("inorderTraversal", () => {
+		test("should return an empty array for an empty tree", () => {
+			const tree = new BinaryTree<number>();
+			expect(tree.inorderTraversal()).toEqual([]);
+		});
+
+		test("should return the correct inorder traversal", () => {
+			const tree = new BinaryTree<number>();
+			tree.insert(10);
+			tree.insert(5);
+			tree.insert(15);
+			tree.insert(3);
+			tree.insert(7);
+			tree.insert(12);
+			tree.insert(17);
+
+			expect(tree.inorderTraversal()).toEqual([3, 5, 7, 10, 12, 15, 17]);
+		});
+
+		test("should allow starting from an arbitrary node", () => {
+			const tree = new BinaryTree<number>();
+			tree.insert(10);
+			tree.insert(5);
+			tree.insert(15);
+			tree.insert(3);
+			tree.insert(7);
+			tree.insert(12);
+			tree.insert(17);
+
+			expect(tree.inorderTraversal(tree.root?.left)).toEqual([3, 5, 7]);
+		});
+	});
 });
