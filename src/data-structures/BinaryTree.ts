@@ -71,9 +71,21 @@ export class BinaryTree<T> {
 		}
 
 		return [
-      ...this.inorderTraversal(root.left),
+			...this.inorderTraversal(root.left),
 			root.value,
 			...this.inorderTraversal(root.right),
+		];
+	}
+
+	public postorderTraversal(root: Node<T> | null = this.root): T[] {
+		if (!root) {
+			return [];
+		}
+
+		return [
+			...this.postorderTraversal(root.left),
+			...this.postorderTraversal(root.right),
+			root.value,
 		];
 	}
 }
