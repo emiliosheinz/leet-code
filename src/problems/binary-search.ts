@@ -8,7 +8,7 @@ export function search(nums: number[], target: number): number {
 
 	while (low <= high) {
 		/** Find the middle element */
-		const mid = Math.round((high + low) / 2);
+		const mid = Math.ceil((high + low) / 2);
 		const current = nums[mid];
 
 		/** If the current element is equals the target then then we found it */
