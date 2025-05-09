@@ -6,9 +6,11 @@ describe("BinaryTree", () => {
 		tree.insert(10);
 		tree.insert(5);
 		tree.insert(15);
+		tree.insert(8);
 
 		expect(tree.root!.value).toBe(10);
 		expect(tree.root!.left!.value).toBe(5);
+		expect(tree.root!.left!.right!.value).toBe(8);
 		expect(tree.root!.right!.value).toBe(15);
 	});
 
