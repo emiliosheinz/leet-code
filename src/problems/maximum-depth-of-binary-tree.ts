@@ -5,11 +5,11 @@ export type TreeNode = {
 };
 
 export function maxDepth(root: TreeNode | null): number {
-  if (!root) return 0;
+  if(!root) return 0;
 
-  const left = maxDepth(root.left);
-  const right = maxDepth(root.right);
+  const leftDepth = maxDepth(root.left);
+  const rightDeth = maxDepth(root.right);
 
-  return Math.max(left, right) + 1;
+  return Math.max(leftDepth, rightDeth) + 1;
 }
 
