@@ -129,4 +129,30 @@ describe("BinaryTree", () => {
 			expect(tree.postorderTraversal(tree.root?.left)).toEqual([3, 7, 5]);
 		});
 	});
+
+	describe("dfs", () => {
+		const tree = new BinaryTree<number>();
+		tree.insert(10);
+		tree.insert(5);
+		tree.insert(15);
+		tree.insert(3);
+		tree.insert(7);
+		tree.insert(12);
+		tree.insert(18);
+
+		test("should return true for a value present in the tree", () => {
+			expect(tree.dfs(7)).toBe(true);
+			expect(tree.dfs(15)).toBe(true);
+		});
+
+		test("should return false for a value not present in the tree", () => {
+			expect(tree.dfs(20)).toBe(false);
+			expect(tree.dfs(1)).toBe(false);
+		});
+
+		test("should return false for an empty tree", () => {
+			const emptyTree = new BinaryTree<number>();
+			expect(emptyTree.dfs(10)).toBe(false);
+		});
+	});
 });
