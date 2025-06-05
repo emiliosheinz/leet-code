@@ -132,13 +132,9 @@ describe("BinaryTree", () => {
 
 	describe("dfs", () => {
 		const tree = new BinaryTree<number>();
-		tree.insert(10);
-		tree.insert(5);
-		tree.insert(15);
-		tree.insert(3);
-		tree.insert(7);
-		tree.insert(12);
-		tree.insert(18);
+		for (const value of [10, 5, 15, 3, 7, 12, 18]) {
+			tree.insert(value);
+		}
 
 		test("should return true for a value present in the tree", () => {
 			expect(tree.dfs(7)).toBe(true);
@@ -154,5 +150,27 @@ describe("BinaryTree", () => {
 			const emptyTree = new BinaryTree<number>();
 			expect(emptyTree.dfs(10)).toBe(false);
 		});
+	});
+
+	describe("bfs", () => {
+		const tree = new BinaryTree<number>();
+    for (const value of [10, 5, 15, 3, 7, 12, 18]) {
+      tree.insert(value);
+    }
+
+    test("should return true for a value present in the tree", () => {
+      expect(tree.bfs(7)).toBe(true);
+      expect(tree.bfs(15)).toBe(true);
+    })
+
+    test("should return false for a value not present in the tree", () => {
+      expect(tree.bfs(20)).toBe(false);
+      expect(tree.bfs(1)).toBe(false);
+    });
+
+    test("should return false for an empty tree", () => {
+      const emptyTree = new BinaryTree<number>();
+      expect(emptyTree.bfs(10)).toBe(false);
+    });
 	});
 });

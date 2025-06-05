@@ -12,7 +12,8 @@ interface BinaryTreeInterface<T> {
 	preorderTraversal(root?: NodeInterface<T> | null): T[];
 	inorderTraversal(root?: NodeInterface<T> | null): T[];
 	postorderTraversal(root?: NodeInterface<T> | null): T[];
-  dfs(value: T, root?: NodeInterface<T> | null): boolean;
+	dfs(value: T, root?: NodeInterface<T> | null): boolean;
+	bfs(value: T): boolean;
 }
 
 class Node<T> implements NodeInterface<T> {
@@ -106,9 +107,22 @@ export class BinaryTree<T> implements BinaryTreeInterface<T> {
 		];
 	}
 
-  public dfs(value: T, root: NodeInterface<T> | null = this.root): boolean {
-    if(!root) return false
-    if(root.value === value) return true;
-    return this.dfs(value, root.left) || this.dfs(value, root.right);
-  }
+	public dfs(value: T, root: NodeInterface<T> | null = this.root): boolean {
+		if (!root) return false;
+		if (root.value === value) return true;
+		return this.dfs(value, root.left) || this.dfs(value, root.right);
+	}
+
+	public bfs(value: T): boolean {
+		if (!this.root) return false;
+		const deque = [];
+		deque.push(this.root);
+		while (deque.length > 0) {
+			const node = deque.shift();
+			if (node?.value === value) return true;
+			if (node?.left) deque.push(node.left);
+			if (node?.right) deque.push(node.right);
+		}
+    return false
+	}
 }
