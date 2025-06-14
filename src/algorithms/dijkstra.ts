@@ -1,16 +1,20 @@
+import { MinHeap, type MinHeapItem } from "../data-structures/MinHeap";
+
 export type Graph = Record<string, Record<string, number>>;
 
+type Discovered = MinHeapItem & { key: string };
+
 export function dijkstra(graph: Graph, start: string): Record<string, number> {
-  // This needs to be replaced with a min heap implementation
-  const discovered: Array<[string, number]> = [[start, 0]];
+  const initialDiscovered = [ { key: start, value: 0 }, ]
+  const discovered: MinHeap<Discovered> = new MinHeap(initialDiscovered);
   const distances: Record<string, number> = {};
 
   for (const key of Object.keys(graph)) {
     distances[key] = key === start ? 0 : Number.POSITIVE_INFINITY;
   }
 
-  while (discovered.length > 0) {
-    const [currentNode, currentDistance] = discovered.shift()!;
+  while (discovered.size() > 0) {
+    const { key: currentNode, value: currentDistance } = discovered.pop();
     const neighbors = Object.entries(graph[currentNode]);
 
     if (distances[currentNode] > currentDistance) {
@@ -20,7 +24,7 @@ export function dijkstra(graph: Graph, start: string): Record<string, number> {
     for (const [neighbor, neighborDistance] of neighbors) {
       const distance = currentDistance + neighborDistance;
       if (distances[neighbor] <= distance) continue;
-      discovered.push([neighbor, distance]);
+      discovered.insert({ key: neighbor, value: distance });
     }
   }
 

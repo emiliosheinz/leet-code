@@ -1,17 +1,22 @@
-// TODO relace Array<number> with Array<MinHeapItem>
 export interface MinHeapItem {
   value: number;
 }
 
-export class MinHeap {
-  private heap: Array<number> = [];
+export class MinHeap<T extends MinHeapItem = MinHeapItem> {
+  private heap: Array<T> = [];
 
-  public insert(value: number) {
+  public constructor(items: Array<T> = []) {
+    for (const item of items) {
+      this.insert(item);
+    }
+  }
+
+  public insert(value: T) {
     this.heap.push(value);
     this.bubbleUp(this.heap.length - 1);
   }
 
-  public pop(): number {
+  public pop(): T {
     if (this.heap.length === 0) {
       throw new RangeError("Heap is empty");
     }
@@ -26,10 +31,14 @@ export class MinHeap {
     return root;
   }
 
+  public size(): number {
+    return this.heap.length;
+  }
+
   private bubbleUp(index: number) {
     if (index === 0) return;
     const parentIndex = this.getParentIndex(index);
-    if (this.heap[index] >= this.heap[parentIndex]) return;
+    if (this.heap[index].value >= this.heap[parentIndex].value) return;
     [this.heap[index], this.heap[parentIndex]] = [
       this.heap[parentIndex],
       this.heap[index],
@@ -45,14 +54,14 @@ export class MinHeap {
 
     if (
       leftChildIndex < size &&
-      this.heap[leftChildIndex] < this.heap[smallestIndex]
+      this.heap[leftChildIndex].value < this.heap[smallestIndex].value
     ) {
       smallestIndex = leftChildIndex;
     }
 
     if (
       rightChildIndex < size &&
-      this.heap[rightChildIndex] < this.heap[smallestIndex]
+      this.heap[rightChildIndex].value < this.heap[smallestIndex].value
     ) {
       smallestIndex = rightChildIndex;
     }
