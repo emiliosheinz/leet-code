@@ -18,6 +18,7 @@ The project is structured as follows:
 |-----------------------------|-----------------------------|
 | BinaryTree | [BinaryTree.ts](src/data-structures/BinaryTree.ts) |
 | DoublyLinkedList | [DoublyLinkedList.ts](src/data-structures/DoublyLinkedList.ts) |
+| MinHeap | [MinHeap.ts](src/data-structures/MinHeap.ts) |
 | SinglyLinkedList | [SinglyLinkedList.ts](src/data-structures/SinglyLinkedList.ts) |
 
 
@@ -26,6 +27,7 @@ The project is structured as follows:
 |            Title            |          Code Path          |
 |-----------------------------|-----------------------------|
 | Bubble sort | [bubble-sort.ts](src/algorithms/bubble-sort.ts) |
+| Dijkstra | [dijkstra.ts](src/algorithms/dijkstra.ts) |
 | Merge sort | [merge-sort.ts](src/algorithms/merge-sort.ts) |
 | Quick sort | [quick-sort.ts](src/algorithms/quick-sort.ts) |
 
@@ -35,6 +37,8 @@ The project is structured as follows:
 |            Title            |          Code Path          |
 |-----------------------------|-----------------------------|
 | Binary search | [binary-search.ts](src/problems/binary-search.ts) |
+| Binary tree level order traversal | [binary-tree-level-order-traversal.ts](src/problems/binary-tree-level-order-traversal.ts) |
+| Clone graph | [clone-graph.ts](src/problems/clone-graph.ts) |
 | Construct binary tree from inorder and postorder traversal | [construct-binary-tree-from-inorder-and-postorder-traversal.ts](src/problems/construct-binary-tree-from-inorder-and-postorder-traversal.ts) |
 | Contains duplicate ii | [contains-duplicate-ii.ts](src/problems/contains-duplicate-ii.ts) |
 | Counting bits | [counting-bits.ts](src/problems/counting-bits.ts) |
