@@ -42,6 +42,7 @@ The project is structured as follows:
 | Construct binary tree from inorder and postorder traversal | [construct-binary-tree-from-inorder-and-postorder-traversal.ts](src/problems/construct-binary-tree-from-inorder-and-postorder-traversal.ts) |
 | Contains duplicate ii | [contains-duplicate-ii.ts](src/problems/contains-duplicate-ii.ts) |
 | Counting bits | [counting-bits.ts](src/problems/counting-bits.ts) |
+| Course schedule | [course-schedule.ts](src/problems/course-schedule.ts) |
 | First unique character in a string | [first-unique-character-in-a-string.ts](src/problems/first-unique-character-in-a-string.ts) |
 | Linked list cycle | [linked-list-cycle.ts](src/problems/linked-list-cycle.ts) |
 | Maximum depth of binary tree | [maximum-depth-of-binary-tree.ts](src/problems/maximum-depth-of-binary-tree.ts) |
