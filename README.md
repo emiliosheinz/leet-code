@@ -49,6 +49,7 @@ The project is structured as follows:
 | Merge two sorted lists | [merge-two-sorted-lists.ts](src/problems/merge-two-sorted-lists.ts) |
 | Middle of the linked list | [middle-of-the-linked-list.ts](src/problems/middle-of-the-linked-list.ts) |
 | Missing number | [missing-number.ts](src/problems/missing-number.ts) |
+| Network delay time | [network-delay-time.ts](src/problems/network-delay-time.ts) |
 | Number of 1 bits | [number-of-1-bits.ts](src/problems/number-of-1-bits.ts) |
 | Number of steps to reduce a number to zero | [number-of-steps-to-reduce-a-number-to-zero.ts](src/problems/number-of-steps-to-reduce-a-number-to-zero.ts) |
 | Path sum | [path-sum.ts](src/problems/path-sum.ts) |
