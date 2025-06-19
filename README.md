@@ -52,6 +52,7 @@ The project is structured as follows:
 | Missing number | [missing-number.ts](src/problems/missing-number.ts) |
 | Network delay time | [network-delay-time.ts](src/problems/network-delay-time.ts) |
 | Number of 1 bits | [number-of-1-bits.ts](src/problems/number-of-1-bits.ts) |
+| Number of islands | [number-of-islands.ts](src/problems/number-of-islands.ts) |
 | Number of steps to reduce a number to zero | [number-of-steps-to-reduce-a-number-to-zero.ts](src/problems/number-of-steps-to-reduce-a-number-to-zero.ts) |
 | Path sum | [path-sum.ts](src/problems/path-sum.ts) |
 | Reverse linked list | [reverse-linked-list.ts](src/problems/reverse-linked-list.ts) |
