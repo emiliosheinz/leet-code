@@ -1,8 +1,19 @@
-export class Stack<T> {
-	public items: T[] = [];
+export class Node<T> {
 
-	public push(item: T): void {
-		this.items.push(item);
+	public constructor(
+		public value: T,
+		public next: Node<T> | null = null,
+	) {}
+}
+
+export class Stack<T> {
+	private top: Node<T> | null = null;
+	private currentSize = 0;
+
+	public push(value: T): void {
+		const newNode = new Node(value, this.top);
+		this.top = newNode;
+		this.currentSize++;
 	}
 
 	public pop(): T {
@@ -10,7 +21,10 @@ export class Stack<T> {
 			throw new RangeError("Stack is empty");
 		}
 
-		return this.items.pop()!;
+		const result = this.top!.value;
+    this.top = this.top!.next;
+    this.currentSize--;
+    return result;
 	}
 
 	public peek(): T {
@@ -18,14 +32,14 @@ export class Stack<T> {
 			throw new RangeError("Stack is empty");
 		}
 
-		return this.items[this.items.length - 1];
+		return this.top!.value;
 	}
 
 	public size(): number {
-		return this.items.length;
+		return this.currentSize;
 	}
 
 	public isEmtpy(): boolean {
-		return this.items.length === 0;
+		return this.top === null;
 	}
 }
