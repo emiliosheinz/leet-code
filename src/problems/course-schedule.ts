@@ -18,7 +18,6 @@ export function canFinish(numCourses: number, prerequisites: number[][]): boolea
 
 		state[course] = "visiting";
 
-
 		for (const neighbor of dependencyGraph[course] ?? []) {
 			if (hasCycle(neighbor)) return true;
 		}
