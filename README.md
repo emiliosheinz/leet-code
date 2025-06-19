@@ -20,6 +20,7 @@ The project is structured as follows:
 | DoublyLinkedList | [DoublyLinkedList.ts](src/data-structures/DoublyLinkedList.ts) |
 | MinHeap | [MinHeap.ts](src/data-structures/MinHeap.ts) |
 | SinglyLinkedList | [SinglyLinkedList.ts](src/data-structures/SinglyLinkedList.ts) |
+| Stack | [Stack.ts](src/data-structures/Stack.ts) |
 
 
 ## Algorithms
@@ -49,6 +50,7 @@ The project is structured as follows:
 | Maximum length substring with two occurrences | [maximum-length-substring-with-two-occurrences.ts](src/problems/maximum-length-substring-with-two-occurrences.ts) |
 | Merge two sorted lists | [merge-two-sorted-lists.ts](src/problems/merge-two-sorted-lists.ts) |
 | Middle of the linked list | [middle-of-the-linked-list.ts](src/problems/middle-of-the-linked-list.ts) |
+| Min stack | [min-stack.ts](src/problems/min-stack.ts) |
 | Missing number | [missing-number.ts](src/problems/missing-number.ts) |
 | Network delay time | [network-delay-time.ts](src/problems/network-delay-time.ts) |
 | Number of 1 bits | [number-of-1-bits.ts](src/problems/number-of-1-bits.ts) |
@@ -59,4 +61,5 @@ The project is structured as follows:
 | Reverse words in a string iii | [reverse-words-in-a-string-iii.ts](src/problems/reverse-words-in-a-string-iii.ts) |
 | Same tree | [same-tree.ts](src/problems/same-tree.ts) |
 | Two sum | [two-sum.ts](src/problems/two-sum.ts) |
+| Valid parentheses | [valid-parentheses.ts](src/problems/valid-parentheses.ts) |
 | Validate binary search tree | [validate-binary-search-tree.ts](src/problems/validate-binary-search-tree.ts) |
