@@ -71,7 +71,7 @@ export class MinHeap<T extends MinHeapItem = MinHeapItem> {
         this.heap[index],
         this.heap[smallestIndex],
       ];
-      this.bubbleDown(index);
+      this.bubbleDown(smallestIndex);
     }
   }
 
