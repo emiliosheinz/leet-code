@@ -1,19 +1,13 @@
 export function bubbleSort(nums: number[]): number[] {
-	const values = [...nums];
-
-	for (const _ of values) {
-		let isSorted = true;
-		for (let i = 0; i < values.length - 1; i++) {
-			if (values[i] > values[i + 1]) {
-				isSorted = false;
-				[values[i], values[i + 1]] = [values[i + 1], values[i]];
+	for (let i = 0; i < nums.length; i++) {
+		let swapped = false;
+		for (let j = 0; j < nums.length - i - 1; j++) {
+			if (nums[j] > nums[j + 1]) {
+				swapped = true;
+				[nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
 			}
 		}
-
-		if (isSorted) {
-			return values;
-		}
+		if (!swapped) return nums;
 	}
-
-	return values;
+	return nums;
 }
